@@ -15,6 +15,11 @@
                     <p class="h5"><?=$_COOKIE['error']?></p>
                 </div>
             <?php endif; ?>
+            <?php if($_COOKIE['success']): ?>
+                <div class="alert alert-success">
+                    <p class="h5"><?=$_COOKIE['success']?></p>
+                </div>
+            <?php endif; ?>
             <div class="col-sm-6 offset-sm-3">
                 <form action="/parser_all.php" class="form-group" method="POST">
                     <div class="row">

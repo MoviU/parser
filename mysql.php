@@ -7,7 +7,9 @@
         $db_host = !isset($config['db_host']) ? $config['db_host'] : 'localhost';
 
         if (empty($config['db_name']) || empty($config['db_passwd']) || empty($config['db_login'])) {
-            print('Заполните данные в App/config.php');
+            setcookie('error', 'Заполните данные в App/config.php', microtime(true) + 1);
+            header('Location: /');
+            exit;
         } 
 
         else {
